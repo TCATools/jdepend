@@ -140,7 +140,7 @@ class Jdepend(object):
                     issue['path'] = ".TCA_PROJECT_SUMMARY"
                     issue['line'] = 0
                     issue['column'] = 0
-                    issue['msg'] = "Package(%s)存在依赖循环: %s" % (current_package, "->".join(depend_packages))
+                    issue['msg'] = "Package(%s)存在依赖循环: %s" % (current_package, " -> ".join(depend_packages))
                     issue['rule'] = "Package_Dependency_Cycles"
                     issue['refs'] = []
                     if issue['rule'] not in rules:
