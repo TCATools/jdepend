@@ -104,8 +104,9 @@ class Jdepend(object):
         jdepend_output = os.path.join(result_dir, "jdepend_output.xml")
         result=[]
 
+        java_bin = os.path.join(os.environ["JDK_11_HOME"], "bin", "java")
         cmd = [
-            "java",
+            java_bin,
             "-cp",
             "lib/jdepend-2.10.jar",
             "jdepend.xmlui.JDepend",
@@ -148,7 +149,7 @@ class Jdepend(object):
 
         # 输出结果到指定的json文件
         with open(result_path, "w") as fp:
-            json.dump(result, fp, indent=2, ensure_ascii=False)
+            json.dump(result, fp, indent=2)
 
 
 if __name__ == '__main__':
