@@ -27,9 +27,9 @@ class Jdepend(object):
         """
         work_dir = os.getcwd()
         if platform.system() == "Windows":
-            file_name = f"{shell_name}.bat"
+            file_name = shell_name + ".bat"
         else:
-            file_name = f"{shell_name}.sh"
+            file_name = shell_name + ".sh"
         shell_filepath = os.path.join(work_dir, file_name)
         # 格式化文件路径
         shell_filepath = os.path.abspath(shell_filepath.strip()).replace('\\', '/').rstrip('/')
