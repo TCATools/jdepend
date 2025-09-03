@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-jdepend:Java包依赖度量工具
+jdepend: Java包依赖度量工具
 功能: 代码分析
 用法: python3 main.py
 """
@@ -140,7 +140,7 @@ class Jdepend(object):
                     issue['path'] = ".TCA_PROJECT_SUMMARY"
                     issue['line'] = 0
                     issue['column'] = 0
-                    issue['msg'] = "Package(%s)存在依赖循环: %s" % (current_package, "->".join(depend_packages))
+                    issue['msg'] = "Package(%s)存在依赖循环: %s" % (current_package, " -> ".join(depend_packages))
                     issue['rule'] = "Package_Dependency_Cycles"
                     issue['refs'] = []
                     if issue['rule'] not in rules:
